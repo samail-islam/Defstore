@@ -1,0 +1,2 @@
+Watson - a simple username searcher tool
+binaryencoder - a program that encodes text into binary
