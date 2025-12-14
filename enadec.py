@@ -64,7 +64,7 @@ while True:
         else:
             encoder = Enadec(user_input)
             print(encoder.run())
-        except Exception as e:
+    except Exception as e:
             print(e)
                     
     
