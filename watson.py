@@ -42,5 +42,15 @@ class Watson:
             	for dom in self.doms:
             		url = f"https://{dom}/{username}/"
             		self.check_url(url)
-watsonapp = Watson()
+watson = Watson()
+while True:
+	try:
+		username = input("Watson~$ ")
+		if len(username.strip().spilt()) == 1:
+			watson.scan_username(username)
+		else:
+			print("username can't have spaces")
+	except exeption as e:
+		print(e)
+			
 		
