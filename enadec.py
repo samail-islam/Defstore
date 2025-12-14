@@ -55,12 +55,16 @@ class Enadec:
 
 
 while True:
-  user_input = input("Enadec~$ ")
-  if user_input == "cd defthon":
-    break
-  elif user_input == "help":
-    print("Usage: encode <words> to encode, decode <binary> to decode")
-  else:
-    encoder = Enadec(user_input)
-    print(encoder.run())
+    try:
+        user_input = input("Enadec~$ ")
+        if user_input == "cd defthon":
+            break
+        elif user_input == "help":
+            print("Usage: encode <words> to encode, decode <binary> to decode")
+        else:
+            encoder = Enadec(user_input)
+            print(encoder.run())
+        except Exception as e:
+            print(e)
+                    
     
