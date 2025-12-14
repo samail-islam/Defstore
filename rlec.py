@@ -174,6 +174,11 @@ class RLECompressor:
 
 
 # -------- Main --------
-user_input = input("RLEc~$ ")
-tool = RLECompressor(user_input)
-print(tool.run())
+while True:
+    try:
+        user_input = input("rlec~$ ")
+        if user_input == "cd defthon":
+            break
+        else:
+            tool = RLECompressor(user_input)
+            print(tool.run())
