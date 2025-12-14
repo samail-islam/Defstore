@@ -1,4 +1,6 @@
 import os
+from colorama import init,Fore,Style
+init()
 
 class RLECompressor:
     def __init__(self, user_input):
@@ -139,9 +141,9 @@ class RLECompressor:
 
         return (
             f"Compressed → {compressed}\n"
-            f"Original size: {orig_size} bytes\n"
-            f"Compressed size: {comp_size} bytes\n"
-            f"Compression ratio: {ratio:.2f}%"
+            Fore.CYAN +f"Original size: {orig_size} bytes\n"
+            Fore.CYAN +f"Compressed size: {comp_size} bytes\n"
+            Fore.YELLOW +f"Compression ratio: {ratio:.2f}%"
         )
 
     # ---------- COMMAND HANDLER ----------
@@ -170,13 +172,13 @@ class RLECompressor:
             return self.decompress_file(data)
 
         else:
-            return "Unknown command"
+            print(Fore.RED +"Unknown command")
 
 
 # -------- Main --------
 while True:
     try:
-        user_input = input("rlec~$ ")
+        user_input = input(Fore.GREEN +"rlec~$ " + Style.RESET_ALL)
         if user_input == "cd defthon":
             break
         else:
