@@ -1,3 +1,5 @@
+from colorama import init,Fore,Style
+init()
 class Enadec:
     def __init__(self, user_input):
         self.letters = [chr(i) for i in range(ord('a'), ord('z') + 1)]
@@ -51,16 +53,14 @@ class Enadec:
         elif command == "decode":
             return self.decode(data)
         else:
-            print("Unknown command. Use 'encode' or 'decode'")
+            print(Fore.RED +"Unknown command. Use 'encode' or 'decode'")
 
 
 while True:
     try:
-        user_input = input("Enadec~$ ")
+        user_input = input(Fore.GREEN +"Enadec~$ " + Style.RESET_ALL)
         if user_input == "cd defthon":
             break
-        elif user_input == "help":
-            print("Usage: encode <words> to encode, decode <binary> to decode")
         else:
             encoder = Enadec(user_input)
             print(encoder.run())
