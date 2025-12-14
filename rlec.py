@@ -140,9 +140,9 @@ class RLECompressor:
         ratio = (1 - comp_size / orig_size) * 100 if orig_size else 0
 
         return (
-            f"Compressed → {compressed}\n"
-            Fore.CYAN +f"Original size: {orig_size} bytes\n"
-            Fore.CYAN +f"Compressed size: {comp_size} bytes\n"
+            f"Compressed → {compressed}\n",
+            Fore.CYAN +f"Original size: {orig_size} bytes\n",
+            Fore.CYAN +f"Compressed size: {comp_size} bytes\n",
             Fore.YELLOW +f"Compression ratio: {ratio:.2f}%"
         )
 
