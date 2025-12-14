@@ -182,3 +182,5 @@ while True:
         else:
             tool = RLECompressor(user_input)
             print(tool.run())
+    except Exception as e:
+        print(e)
