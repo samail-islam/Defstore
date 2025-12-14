@@ -1,2 +1,3 @@
-Watson - a simple username searcher tool
-binaryencoder - a program that encodes text into binary
+Watson - a simple username searcher tool.
+Enadec - a program that encodes and decides text to binary and vice-versa.
+RLEc - an Auto-Detecting RLE Compressor that compresses text, files including ascii art and bitmap images support.
